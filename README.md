@@ -1,7 +1,7 @@
-# gh
-> Github 代理脚本
+# ghp
+> Github Proxy | Github 代理脚本
 
-[![Gh CI](https://github.com/gclm/gh/actions/workflows/release.yml/badge.svg)](https://github.com/gclm/gh/actions)
+[![Ghp CI](https://github.com/gclm/gh/actions/workflows/release.yml/badge.svg)](https://github.com/gclm/gh/actions)
 
 ## 使用教程
 ```shell
@@ -18,3 +18,8 @@ gh wget https://github.com/gclm/gh.git
 - 支持GitHub archive 代理
 - 支持GitHub gist 代理
 - 支持GitHub raw.githubusercontent.com 代理
+
+## 参考
+- https://ld246.com/article/1614736458729
+- https://developer.aliyun.com/article/710818
+- https://developer.aliyun.com/article/779552
