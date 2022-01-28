@@ -1,4 +1,5 @@
-name: Github Release
+name: Ghp Release
+
 on:
   create:
     tags:
