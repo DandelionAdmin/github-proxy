@@ -1,4 +1,4 @@
-module gh
+module ghp
 
 go 1.17
 

@@ -1,5 +1,5 @@
 # Make sure to check the documentation at http://goreleaser.com
-project_name: gh
+project_name: ghp
 before:
   hooks:
     - go mod download
