@@ -31,3 +31,37 @@ changelog:
       - '^docs:'
       - '^test:'
 
+brews:
+  - name: ghp
+    tap:
+      owner: gclm
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TOKEN }}"
+
+    url_template: "https://github.com/gclm/ghp/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    # Git author used to commit to the repository.
+    # Defaults are shown.
+    commit_author:
+      name: gclm
+      email: gclmit@163.com
+    homepage: "https://blog.gclmit.club"
+    description: "Github Proxy | Github 代理"
+
+    # Packages your package depends on.
+    dependencies:
+      - name: git
+
+    # So you can `brew test` your formula.
+    # Default is empty.
+    test: |
+      system "#{bin}/ghp curl https://raw.githubusercontent.com/gclm/homebrew-tap/note/README.md"
+    # Custom install script for brew.
+    # Default is 'bin.install "program"'.
+    install: |
+      bin.install "ghp"
+      # Install bash completion
+      output = Utils.safe_popen_read("#{bin}/ghp", "completion", "bash")
+      (bash_completion/"ghp").write output
+      # Install zsh completion
+      output = Utils.safe_popen_read("#{bin}/ghp", "completion", "zsh")
+      (zsh_completion/"_ghp").write output
