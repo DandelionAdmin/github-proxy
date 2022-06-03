@@ -1,6 +1,6 @@
-# ghp
+# Github Proxy
 
-> Github Proxy | Github 代理脚本
+> Github 代理脚本
 
 [![Ghp CI](https://github.com/gclm/gh/actions/workflows/release.yml/badge.svg)](https://github.com/gclm/gh/actions)
 
